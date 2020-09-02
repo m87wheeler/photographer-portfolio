@@ -24,6 +24,21 @@ const Headline = styled.h1`
   line-height: 3rem;
   margin-left: 3rem;
   color: white;
+
+  @media (max-width: 700px) {
+    display: none;
+  }
+`
+
+const Icon = styled.h1`
+  display: none;
+
+  @media (max-width: 700px) {
+    display: block;
+    margin-left: 2rem;
+    line-height: 3rem;
+    color: white;
+  }
 `
 
 const Header = props => {
@@ -31,6 +46,9 @@ const Header = props => {
     <HeaderWrapper>
       <Link to="/">
         <Headline>PHOTOGRAPHY PORTFOLIO</Headline>
+        <Icon>
+          <span style={{ color: "#999" }}>P</span>Portfolio...
+        </Icon>
       </Link>
       <Hamburger onClick={props.onClick} />
     </HeaderWrapper>

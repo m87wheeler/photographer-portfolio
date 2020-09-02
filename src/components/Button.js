@@ -46,7 +46,11 @@ const Button = props => {
   if (props.to) {
     return (
       <Link to={props.to} className={props.className}>
-        <ButtonWrapper primary={props.primary} icon={props.icon}>
+        <ButtonWrapper
+          primary={props.primary}
+          icon={props.icon}
+          className={props.className}
+        >
           {props.icon === "back" ? (
             <img className="icon" src={backIcon} alt="icon" />
           ) : null}

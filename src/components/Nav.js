@@ -12,6 +12,11 @@ const NavWrapper = styled.nav`
   transition: height 0.3s ease-in-out;
   z-index: 9;
   overflow: hidden;
+
+  @media (max-width: 700px) {
+    left: 0;
+    width: 100%;
+  }
 `
 
 const UnorderedList = styled.ul`

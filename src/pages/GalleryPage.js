@@ -12,6 +12,13 @@ const BackButton = styled(Button)`
   position: absolute;
   bottom: 0;
   left: 1rem;
+
+  @media (max-width: 1360px) {
+    position: relative;
+    left: 0;
+    display: block;
+    margin: 0 auto 1rem;
+  }
 `
 
 const GalleryWrapper = styled.main`

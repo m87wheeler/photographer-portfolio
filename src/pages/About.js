@@ -9,11 +9,16 @@ const PortfolioImageWrapper = styled.div`
   height: 65%;
   overflow: hidden;
 
-  img {
+  &::after {
+    content: "";
     position: absolute;
-    top: 50%;
+    top: 0;
     left: 0;
-    transform: translateY(-50%);
+    width: 100%;
+    height: 100%;
+    background-image: url("https://images.unsplash.com/photo-1531865272530-d60338729e28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80");
+    background-position: center;
+    background-size: cover;
   }
 `
 
@@ -29,14 +34,7 @@ const AboutWrapper = styled.main`
 const About = () => {
   return (
     <>
-      <PortfolioImageWrapper>
-        <img
-          src={
-            "https://images.unsplash.com/photo-1531865272530-d60338729e28?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1950&q=80"
-          }
-          alt=""
-        />
-      </PortfolioImageWrapper>
+      <PortfolioImageWrapper />
       <PageHeader
         title="About Me"
         introduction="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra

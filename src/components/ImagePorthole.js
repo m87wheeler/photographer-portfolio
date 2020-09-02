@@ -3,9 +3,11 @@ import PropTypes from "prop-types"
 import styled from "styled-components"
 
 const PortholeContainer = styled.div`
-  width: ${props => (props.size ? `${props.size}rem` : "20rem")};
-  height: auto;
   padding: 1rem 0;
+
+  @media (max-width: 700px) {
+    height: calc(100vh - 6rem);
+  }
 `
 
 const PortholeWrapper = styled.div`
@@ -33,6 +35,11 @@ const PortholeWrapper = styled.div`
     top: 50%;
     left: 0%;
     transform: translateY(-50%);
+  }
+
+  @media (max-width: 700px) {
+    width: ${props => (props.size ? `${props.size}rem` : "16rem")};
+    height: ${props => (props.size ? `${props.size}rem` : "16rem")};
   }
 `
 

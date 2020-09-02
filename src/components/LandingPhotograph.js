@@ -4,9 +4,9 @@ import styled, { keyframes } from "styled-components"
 
 const slowScaleGrow = keyframes`
   from {
-    transform: translateX(-50%) translateY(-50%) scale(1);
+    transform: scale(1);
   } to {
-    transform: translateX(-50%) translateY(-50%) scale(1.1);
+    transform: scale(1.1);
   }
 `
 
@@ -18,14 +18,17 @@ const ImageWrapper = styled.div`
   height: 90.5vh;
   overflow: hidden;
 
-  img {
+  &::after {
+    content: "";
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translateX(-50%) translateY(-50%);
+    top: 0;
+    left: 0;
     width: 100%;
+    height: 100%;
+    background-image: url(${props => props.src});
+    background-size: cover;
+    background-position: center;
     animation: ${slowScaleGrow} 20s forwards;
-    z-index: 0;
   }
 `
 
@@ -41,34 +44,73 @@ const DarkFrameTop = styled(DarkFrame)`
   left: 0;
   height: 7.5rem;
   width: 100%;
+
+  @media (max-width: 1360px) {
+    height: 5rem;
+  }
+
+  @media (max-width: 700px) {
+    height: 2rem;
+  }
 `
 const DarkFrameRight = styled(DarkFrame)`
   top: 7.5rem;
   right: 0;
   width: 7.5rem;
   height: calc(100% - 15rem);
+
+  @media (max-width: 1360px) {
+    top: 5rem;
+    width: 5rem;
+    height: calc(100% - 10rem);
+  }
+
+  @media (max-width: 700px) {
+    top: 2rem;
+    width: 2rem;
+    height: calc(100% - 4rem);
+  }
 `
 const DarkFrameBottom = styled(DarkFrame)`
   bottom: 0;
   left: 0;
   height: 7.5rem;
   width: 100%;
+
+  @media (max-width: 1360px) {
+    height: 5rem;
+  }
+
+  @media (max-width: 1360px) {
+    height: 2rem;
+  }
 `
 const DarkFrameLeft = styled(DarkFrame)`
   top: 7.5rem;
   left: 0;
   width: 7.5rem;
   height: calc(100% - 15rem);
+
+  @media (max-width: 1360px) {
+    top: 5rem;
+    width: 5rem;
+    height: calc(100% - 10rem);
+  }
+
+  @media (max-width: 1360px) {
+    top: 2rem;
+    width: 2rem;
+    height: calc(100% - 4rem);
+  }
 `
 
 const LandingPhotograph = props => {
   return (
-    <ImageWrapper>
+    <ImageWrapper src={props.src}>
       <DarkFrameTop />
       <DarkFrameRight />
       <DarkFrameBottom />
       <DarkFrameLeft />
-      <img src={props.src} alt="landing" />
     </ImageWrapper>
   )
 }

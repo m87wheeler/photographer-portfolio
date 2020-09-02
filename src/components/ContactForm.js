@@ -12,6 +12,11 @@ const FormWrapper = styled.form`
   margin: 0 20%;
   padding: 2rem;
   background: #444;
+
+  @media (max-width: 700px) {
+    width: 90%;
+    margin: 0 5%;
+  }
 `
 
 const Input = styled.input`
@@ -21,6 +26,11 @@ const Input = styled.input`
   padding: 1rem 2rem;
   border: 3px solid white;
   background: transparent;
+
+  @media (max-width: 700px) {
+    width: 100%;
+    padding: 1rem;
+  }
 `
 
 const TextArea = styled.textarea`
@@ -31,6 +41,11 @@ const TextArea = styled.textarea`
   padding: 1rem 2rem;
   border: 3px solid white;
   background: transparent;
+
+  @media (max-width: 700px) {
+    width: 100%;
+    padding: 1rem;
+  }
 `
 
 const Label = styled.label`

@@ -22,6 +22,10 @@ const HamburgerWrapper = styled.div`
       margin-left: 0.5rem;
     }
   }
+
+  @media (max-width: 700px) {
+    right: 1.25rem;
+  }
 `
 
 const Bar = styled.span`

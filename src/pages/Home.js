@@ -17,6 +17,11 @@ const PhotographyInfoGrid = styled.div`
   * {
     margin: 0 auto;
   }
+
+  @media (max-width: 1360px) {
+    display: flex;
+    flex-flow: column nowrap;
+  }
 `
 
 const ButtonContainer = styled.div`
@@ -39,9 +44,24 @@ const RisingText = styled.p`
   font-size: 5rem;
   letter-spacing: 0.5rem;
   line-height: 6.5rem;
-  margin-left: 3rem;
   color: white;
   z-index: 1;
+
+  @media (max-width: 1360px) {
+    left: 5rem;
+    margin: 0;
+    width: calc(100% - 10rem);
+    font-size: 3rem;
+    line-height: 4.5rem;
+  }
+
+  @media (max-width: 700px) {
+    left: 2rem;
+    margin: 0;
+    width: calc(100% - 4rem);
+    font-size: 1.5rem;
+    line-height: 2.5rem;
+  }
 `
 
 const Home = () => {

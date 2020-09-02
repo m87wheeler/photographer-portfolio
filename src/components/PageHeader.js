@@ -7,8 +7,6 @@ const HeaderWrapper = styled.div`
 `
 
 const Title = styled.h1`
-  width: auto;
-  height: 7rem;
   margin-bottom: 2rem;
   text-align: center;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
@@ -17,13 +15,18 @@ const Title = styled.h1`
   font-size: 4rem;
   letter-spacing: 0.5rem;
   text-transform: uppercase;
-  line-height: 10rem;
+  padding: 3rem 0;
   color: white;
+
+  @media (max-width: 700px) {
+    font-size: 2rem;
+    padding: 3rem 0 1rem;
+  }
 `
 
 const Introduction = styled.p`
   width: 40%;
-  margin: 0 30% 2rem;
+  margin: auto 30% 2rem;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
@@ -32,6 +35,15 @@ const Introduction = styled.p`
   text-align: center;
   line-height: 1.5rem;
   color: white;
+
+  @media (max-width: 1360px) {
+    width: 80%;
+    margin: 0 10% 2rem;
+  }
+
+  @media (max-width: 700px) {
+    text-align: justify;
+  }
 `
 
 const PageHeader = props => {

@@ -10,11 +10,20 @@ const Main = styled.main`
   background: #333;
   overflow-x: hidden;
   overflow-y: scroll;
+
+  @media (max-width: 700px) {
+    left: 0;
+    width: 100%;
+  }
 `
 const ScrollTrack = createGlobalStyle`
 /* width */
 ::-webkit-scrollbar {
   width: 13px;
+
+  @media (max-width: 700px) {
+  display: none;
+}
 }
 
 /* Track */
