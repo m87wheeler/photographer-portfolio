@@ -16,6 +16,7 @@ const NavWrapper = styled.nav`
   @media (max-width: 700px) {
     left: 0;
     width: 100%;
+    height: ${props => (props.isOpen ? "calc(100% - 3rem)" : "0")};
   }
 `
 
@@ -27,6 +28,10 @@ const UnorderedList = styled.ul`
   display: flex;
   flex-flow: column nowrap;
   text-align: center;
+
+  @media (max-width: 700px) {
+    padding-top: 3rem;
+  }
 `
 
 const NavLink = styled.li`
