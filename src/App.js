@@ -2,8 +2,6 @@ import React, { useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import styled, { createGlobalStyle } from "styled-components"
 
-import ScrollToTop from "./components/ScrollToTop"
-
 import Header from "./components/Header"
 import Nav from "./components/Nav"
 import BodyWindow from "./components/BodyWindow"
