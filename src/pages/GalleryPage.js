@@ -12,6 +12,7 @@ const BackButton = styled(Button)`
   position: absolute;
   bottom: 0;
   left: 1rem;
+  width: 8rem;
 
   @media (max-width: 1360px) {
     position: relative;

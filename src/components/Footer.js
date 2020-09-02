@@ -2,7 +2,7 @@ import React from "react"
 import styled from "styled-components"
 
 const FooterWrapper = styled.footer`
-  position: absolute;
+  position: fixed;
   bottom: 0;
   left: 0;
   width: 100%;

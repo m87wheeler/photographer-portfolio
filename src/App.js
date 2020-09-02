@@ -2,6 +2,8 @@ import React, { useState } from "react"
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom"
 import styled, { createGlobalStyle } from "styled-components"
 
+import ScrollToTop from "./components/ScrollToTop"
+
 import Header from "./components/Header"
 import Nav from "./components/Nav"
 import BodyWindow from "./components/BodyWindow"
@@ -15,13 +17,22 @@ import Contact from "./pages/Contact"
 
 const StyleReset = createGlobalStyle`
   * {
-    margin: 0%;
+    margin: 0;
     padding: 0;
     box-sizing: border-box;
   }
 
   a {
     text-decoration: none;
+  }
+
+  html { 
+    height: 100%; 
+    overflow: auto; 
+    }
+
+  body { 
+    height: 100%; 
   }
 `
 

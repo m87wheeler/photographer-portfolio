@@ -1,8 +1,9 @@
-import React from "react"
+import React, { useEffect } from "react"
+import { useLocation } from "react-router-dom"
 import styled, { createGlobalStyle } from "styled-components"
 
 const Main = styled.main`
-  position: absolute;
+  position: relative;
   top: 3rem;
   left: 3rem;
   width: calc(100% - 6rem);
@@ -45,12 +46,20 @@ const ScrollTrack = createGlobalStyle`
 }
 `
 
-const BodyWIndow = props => {
+const BodyWindow = props => {
+  const { pathname } = useLocation()
+
+  useEffect(() => {
+    document.querySelector("#main").scrollTo(0, 0)
+  }, [pathname])
+  /* this is definitely not a safe way to do this */
+
   return (
     <>
-      <ScrollTrack /> <Main>{props.children}</Main>
+      <ScrollTrack />
+      <Main id="main">{props.children}</Main>
     </>
   )
 }
 
-export default BodyWIndow
+export default BodyWindow

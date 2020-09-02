@@ -5,17 +5,17 @@ import styled from "styled-components"
 import Hamburger from "./Hamburger"
 
 const HeaderWrapper = styled.header`
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 3rem;
   background: #111;
-  cursor: pointer;
   z-index: 10;
 `
 
 const Headline = styled.h1`
+  display: inline-block;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
     Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   font-weight: 300;
